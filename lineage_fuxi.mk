@@ -17,6 +17,19 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # UDFPS
 TARGET_HAS_UDFPS := true
 TARGET_EXCLUDE_AUDIOFX := true
+# To include Gapps 
+WITH_GMS := true
+
+# To Build Google(Dailer, Message, Phone) and BCR
+WITH_GMS_COMMS_SUITE := true
+
+# To Add cinematic wallpaer support (only supported in gapps build not in vanilla remove this flag for vanilla builds)
+TARGET_SUPPORTS_WALLEFFECT := true
+
+#Some more GMS Flag
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_STOCK_AICORE := false
 
 PRODUCT_DEVICE := fuxi
 PRODUCT_NAME := lineage_fuxi
@@ -24,4 +37,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := 2211133C
 PRODUCT_MANUFACTURER := Xiaomi
 
-BUILD_FINGERPRINT := Xiaomi/mivendor_sm8550_global/mivendor:13/TKQ1.221114.001/OS2.0.101.0.VMCMIXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/fuxi/miproduct:15/AQ3A.240912.001/OS2.0.100.0.VMCCNXM:user/release-keys
+
+# GMS
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

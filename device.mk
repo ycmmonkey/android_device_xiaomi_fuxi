@@ -17,7 +17,7 @@ $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 $(call inherit-product, vendor/xiaomi/ViPER4AndroidFX/config.mk)
 
 # BCR
-$(call inherit-product, vendor/bcr/bcr.mk)
+# $(call inherit-product, vendor/bcr/bcr.mk)
 
 # Init
 PRODUCT_COPY_FILES += \
