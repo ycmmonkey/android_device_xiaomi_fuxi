@@ -13,12 +13,6 @@ $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 # Camera
 $(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
 
-# ViperX
-$(call inherit-product, vendor/xiaomi/ViPER4AndroidFX/config.mk)
-
-# BCR
-# $(call inherit-product, vendor/bcr/bcr.mk)
-
 # Init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.fuxi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.fuxi.rc \
