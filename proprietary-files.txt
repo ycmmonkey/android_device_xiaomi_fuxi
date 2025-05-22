@@ -1,4 +1,4 @@
-# Unpinned blobs from fuxi (OS2.0.200.7.VMCCNXM)
+# All blobs from missi-user 15 AQ3A.240912.001 OS2.0.200.7.VMCCNXM release-keys, unless pinned
 
 # ACDB
 odm/etc/acdbdata/Tutu/Tutu_acdb_cal.acdb
