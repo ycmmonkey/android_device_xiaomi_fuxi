@@ -24,12 +24,12 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD += \
 # OTA
 TARGET_OTA_ASSERT_DEVICE := fuxi
 
-# Powershare
-TARGET_POWERSHARE_PATH := /sys/class/qcom-battery/reverse_chg_mode
-
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# Libinit
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH)/init:libinit_fuxi)
 
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
