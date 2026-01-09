@@ -10,6 +10,15 @@ $(call inherit-product, device/xiaomi/sm8550-common/common.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/fuxi/fuxi-vendor.mk)
 
+# ViPER4AndroidFX
+$(call inherit-product, vendor/xiaomi/ViPER4AndroidFX/config.mk)
+
+# Camera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/permissions/camerax-vendor-extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/camerax-vendor-extensions.xml
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/audio/mixer_paths_kalama_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_kalama/mixer_paths_kalama_mtp.xml \
