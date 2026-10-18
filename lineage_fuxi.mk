@@ -14,10 +14,15 @@ $(call inherit-product, device/xiaomi/fuxi/device.mk)
 # Inherit LineageOS configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+TARGET_INCLUDES_OEM_App := true
+TARGET_INCLUDES_DolbyVision := true
+
 PRODUCT_DEVICE := fuxi
 PRODUCT_NAME := lineage_fuxi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := 2211133C
 PRODUCT_MANUFACTURER := Xiaomi
 
-BUILD_FINGERPRINT := Xiaomi/fuxi/fuxi:16/BP2A.250605.031.A3/OS3.0.307.0.WMCCNXM:user/release-keys
+BUILD_FINGERPRINT := Xiaomi/fuxi/fuxi:16/BP2A.250605.031.A3.OS3.0.309.0.WMCCNXM:release-keys
+
+PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
