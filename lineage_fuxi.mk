@@ -14,7 +14,6 @@ $(call inherit-product, device/xiaomi/fuxi/device.mk)
 # Inherit LineageOS configurations
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-TARGET_INCLUDES_OEM_App := true
 TARGET_INCLUDES_DolbyVision := true
 
 PRODUCT_DEVICE := fuxi
